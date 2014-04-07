@@ -123,10 +123,10 @@ td.active{
  .views-widget-filter-secondary fieldset legend {
   width:250px;
 }
-.views-exposed-widgets {
+#views-form-bulk-admin-page .views-exposed-widgets {
   margin-bottom: 0;
 }
-.views-exposed-form .views-exposed-widget .form-submit {
+#views-form-bulk-admin-page .views-exposed-form .views-exposed-widget .form-submit {
 margin-top: 1em;
 }
 
