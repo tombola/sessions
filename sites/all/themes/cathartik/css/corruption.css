@@ -1,0 +1,139 @@
+/* main deviations from bartik for stylistic reasons */
+
+.form-type-date-popup label,
+.form-type-date-popup .description,
+.tabledrag-toggle-weight,
+.form-item-field-resources-und-0-title .description {
+  display:none;
+}
+
+.container-inline-date .date-padding {
+  padding:0;
+}
+
+form.node-form .field-multiple-table th.field-label {
+  padding-left: 5px;
+}
+
+.group-right div {
+  margin-left: 30px;
+}
+.group-right div div {
+  margin-left:0;
+}
+
+.form-required {
+  color: #f06eaa;
+}
+
+td.views-field-views-bulk-operations {
+  width: 30px;
+}
+
+a.contextual-links-trigger {
+  background: transparent url(../images/gear-select.png) no-repeat 2px 0;
+  display: block;
+}
+/* highlight admin views rows */
+tr .views-field-title {
+  width: 200px;
+}
+
+tr.node-session .views-field-title {
+  background-color: #8EF2BF;
+}
+tr.node-course .views-field-title {
+  background-color: #92CDF0;
+}
+td.active{
+  background-color: transparent;
+  background-color: rgba(0,0,0,0.2);
+}
+
+/* Course View */
+.box-list ul,
+.view-header ul {
+  margin: 0;
+  padding: 0;
+  margin-bottom: 20px;
+}
+.box-list li,
+.view-header li { list-style: none; padding:0;}
+.box-list li a,
+.view-header li a {
+  background-color: #eee;
+  width: 100px;
+  height: 1.5em;
+  display: block;
+  float: left;
+  border-radius: 5px;
+  margin-right: 10px;
+  padding: 10px;
+}
+.box-list li a:hover,
+.view-header li a:hover {
+  background-color: #ddd;
+  text-decoration: none;
+}
+.view-header:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+.view-empty {
+  padding-top: 20px;
+  font-style: italic;
+}
+#views-record-count-text {
+  text-align: right;
+  margin-top: -20px;
+}
+
+/* clean up vbo views */
+
+#views-form-bulk-admin-page fieldset.container-inline {
+  margin: 0;
+  padding: 0;
+  border: 0 none;
+  background: transparent;
+}
+
+#views-form-bulk-admin-page .fieldset-wrapper {
+  margin:-80px;
+}
+#views-form-bulk-admin-page fieldset.container-inline .fieldset-legend {
+  display: none;
+
+}
+#views-form-bulk-admin-page fieldset.container-inline legend {
+  background: transparent;
+  border: 0 none
+}
+#views-form-bulk-admin-page fieldset.container-inline {
+  width: 500px;
+  margin-right: 60px;
+  float:right;
+}
+#views-form-bulk-admin-page fieldset.container-inline .form-submit {
+  float:right;
+}
+
+/* Calendar highlighting */
+
+.calendar-calendar .year.mini-day-on,
+.calendar-calendar .year.mini-day-off {
+    height: 40px;
+}
+.calendar-calendar .month-view .full td.single-day div.monthview,
+.calendar-calendar .year.mini-day-on {
+  background-color: #8EF2BF;
+}
+.calendar-calendar .year.mini-day-on a {
+  display:block;
+  width:40px;
+  height:40px;
+  text-decoration: none;
+  color: black;
+}
