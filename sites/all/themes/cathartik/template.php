@@ -173,11 +173,12 @@ function cathartik_date_combo($variables) {
  * return string with html
  */
 function cathartik_menu_local_task($variables) {
-  $link = $variables['element']['#link'];
+  if ($link = $variables['element']['#link']) {
   // remove the view link when viewing the node
-  if ($link['path'] == 'node/%/view') return false;
+  if (isset($link['path']) && $link['path'] == 'node/%/view') return false;
   $link['localized_options']['html'] = TRUE;
-  return '<li>'.l($link['title'], $link['href'], $link['localized_options']).'</li>'."\n"; 
+  return '<li>'.l($link['title'], $link['href'], $link['localized_options']).'</li>'."\n";
+}
 }
  
 /**
