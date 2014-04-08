@@ -75,6 +75,10 @@ td.active{
   background-color: #ddd;
   text-decoration: none;
 }
+.view-header .box-list li a {
+  background-color: #555;
+  color: #eee;
+}
 .view-header:after {
   content: ".";
   display: block;
