@@ -762,7 +762,7 @@ function link_field_process($element, $form_state, $complete_form) {
     $element['title'] = array(
       '#type' => 'textfield',
       '#maxlength' => $settings['title_maxlength'],
-      '#title' => t('Title'),
+      '#title' => t('Resource'),
       '#description' => t('The link title is limited to @maxlength characters maximum.', array('@maxlength' => $settings['title_maxlength'])),
       '#required' => ($settings['title'] == 'required' && (($element['#delta'] == 0 && $element['#required']) || !empty($element['#value']['url']))) ? TRUE : FALSE,
       '#default_value' => isset($element['#value']['title']) ? $element['#value']['title'] : NULL,

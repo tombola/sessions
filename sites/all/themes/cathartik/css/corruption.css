@@ -11,19 +11,35 @@
   padding:0;
 }
 
+/* fix autocomplete popup */
+.ds-form {
+  position: relative;
+}
+
 form.node-form .field-multiple-table th.field-label {
   padding-left: 5px;
 }
-
+form .inline-form-field {
+  float:left;
+  clear:left;
+}
+form .inline-form-field-right {
+  float:right;
+  clear:right;
+}
 .group-right div {
   margin-left: 30px;
 }
 .group-right div div {
   margin-left:0;
 }
-
 .form-required {
   color: #f06eaa;
+}
+label,
+.views-exposed-form label {
+  font-weight: normal;
+  margin: 10px 0 6px 0;
 }
 
 td.views-field-views-bulk-operations {
@@ -34,11 +50,18 @@ a.contextual-links-trigger {
   background: transparent url(../images/gear-select.png) no-repeat 2px 0;
   display: block;
 }
-/* highlight admin views rows */
+
+.region-content ul, .region-content ol {
+  padding: 0 0 0.25em 1.5em;
+}
+
+/* SESSIONS SPECIFIC */
+
+/* highlight specific admin views rows */
+
 tr .views-field-title {
   width: 200px;
 }
-
 tr.node-session .views-field-title {
   background-color: #8EF2BF;
 }
@@ -50,17 +73,29 @@ td.active{
   background-color: rgba(0,0,0,0.2);
 }
 
-/* Course View */
-.box-list ul,
-.view-header ul {
+#field-resources-values .description {
+  display: none;
+}
+.ds-form .description {
+  margin: 10px 0 10px 0;
+  
+  font-style: italic;
+}
+.small-text {
+  font-size: 0.85em;
+  line-height: 2;
+}
+/* END SESSIONS SPECIFIC */
+
+
+/* Views (custom class box-list set in views ui) */
+.box-list ul {
   margin: 0;
   padding: 0;
   margin-bottom: 20px;
 }
-.box-list li,
-.view-header li { list-style: none; padding:0;}
-.box-list li a,
-.view-header li a {
+.box-list li { list-style: none; padding:0;}
+.box-list li a {
   background-color: #eee;
   width: 100px;
   height: 1.5em;
@@ -94,6 +129,19 @@ td.active{
   text-align: right;
   margin-top: -20px;
 }
+tr td { vertical-align: top; }
+tr td ul { margin: 0; }
+
+.views-exposed-widget.views-submit-button,
+.views-exposed-widget.views-reset-button {
+  margin: 17px 0 0 -10px;
+}
+.views-exposed-widget {
+  margin-bottom: 10px;
+}
+.views-exposed-widget fieldset {
+  margin:0;
+}
 
 /* clean up vbo views */
 
@@ -104,12 +152,13 @@ td.active{
   background: transparent;
 }
 
-#views-form-bulk-admin-page .fieldset-wrapper {
+#views-form-bulk-admin-page #edit-select .fieldset-wrapper {
   margin:-80px;
 }
+
+
 #views-form-bulk-admin-page fieldset.container-inline .fieldset-legend {
   display: none;
-
 }
 #views-form-bulk-admin-page fieldset.container-inline legend {
   background: transparent;
@@ -123,20 +172,21 @@ td.active{
 #views-form-bulk-admin-page fieldset.container-inline .form-submit {
   float:right;
 }
+.views-widget-filter-secondary {
+  margin-top: 35px;
+}
 .views-widget-filter-secondary fieldset,
- .views-widget-filter-secondary fieldset legend {
+.views-widget-filter-secondary fieldset legend {
   width:250px;
 }
 #views-form-bulk-admin-page .views-exposed-widgets {
   margin-bottom: 0;
 }
-#views-form-bulk-admin-page .views-exposed-form .views-exposed-widget .form-submit {
-margin-top: 1em;
-}
-
+#views-exposed-form-bulk-admin-page .views-exposed-widgets 
 a.fieldset-title {
   min-width: 200px;
 }
+
 /* Calendar highlighting */
 
 .calendar-calendar .year.mini-day-on,

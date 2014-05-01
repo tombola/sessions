@@ -14,7 +14,6 @@
   <<?php print $header_wrapper ?> class="group-header<?php print $header_classes; ?>">
     <?php print $header; ?>
 
-    <h1>HELLO</h1>
   </<?php print $header_wrapper ?>>
 
   <<?php print $left_wrapper ?> class="group-left<?php print $left_classes; ?>">

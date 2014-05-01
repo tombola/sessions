@@ -6,6 +6,9 @@ files/
 sites/*/files
 sites/*/private
 
+# git themesarately
+sites/all/themes§
+
 # Ignore configuration files that may contain sensitive information.
 sites/*/*settings*.php
 

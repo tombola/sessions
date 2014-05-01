@@ -160,6 +160,30 @@ function cathartik_date_combo($variables) {
   return theme('form_element', $variables);
 }
 
+function cathartik_form_node_form_alter(&$form, &$form_state, $form_id) {
+  switch($form_id) {
+    case 'session_node_form':
+      //dpm($form);
+      $inlinefields = array(
+        'field_date_delivered',
+        'field_staffmember',   
+      );
+      foreach ($inlinefields as $field) {
+        $form[$field]['#attributes']['class'][] = 'inline-form-field';
+      }
+      $rightfields = array(
+        'field_expected',
+        'field_attended',   
+      );
+      foreach ($rightfields as $field) {
+        $form[$field]['#attributes']['class'][] = 'inline-form-field-right';
+      }
+      //$form['field_category']['und']['#multiple'] = FALSE;
+
+      break;
+  }
+}
+
 
 
 /* make node tabs contextual links instead
@@ -173,6 +197,7 @@ function cathartik_date_combo($variables) {
  * return string with html
  */
 function cathartik_menu_local_task($variables) {
+
   if ($link = $variables['element']['#link']) {
   // remove the view link when viewing the node
   if (isset($link['path']) && $link['path'] == 'node/%/view') return false;
@@ -191,7 +216,10 @@ function cathartik_menu_local_task($variables) {
 function cathartik_menu_local_tasks(&$variables) {
   $output = '';
   $has_access = user_access('access contextual links');
-   drupal_add_library('contextual', 'contextual-links');
+  // standard tabs for calendar view (by path)
+  if (arg(0)=='course' && arg(2)=='sessions') { $has_access = 0; }
+
+  drupal_add_library('contextual', 'contextual-links');
   if (!empty($variables['primary'])) {
     $variables['primary']['#prefix'] = '<h2 class="element-invisible">' . t('Primary tabs') . '</h2>';
    
@@ -210,5 +238,6 @@ function cathartik_menu_local_tasks(&$variables) {
     $variables['secondary']['#suffix'] = '</ul>';
     $output .= drupal_render($variables['secondary']);
   }
+
   return $output;
 }
